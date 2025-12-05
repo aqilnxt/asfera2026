@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  /* Font Families */
+  --font-heading: "Cinzel Decorative", serif;
+  --font-body: "Inter", sans-serif;
+  --font-ui: "Roboto", sans-serif;
+
+  /* Steampunk Colors */
+  --color-brass: #d4c5a9;
+  --color-copper: #b87333;
+  --color-bronze: #8b6914;
+  --color-dark-navy: #1a2332;
+}
+
+/* Custom fonts */
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url("/fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url("/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url("/fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf")
+    format("truetype");
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom font utilities */
+.font-cinzel {
+  font-family: "Cinzel Decorative", serif;
+}
+
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
