@@ -1,0 +1,1431 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASFERA 2026 - As-Syifa Festival Raya</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="src/assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="src/assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="src/assets/favicon_io/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .gradient-text {
+        background: linear-gradient(to right, #3498db, #2c3e50);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+          padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .faq-answer.active {
+        max-height: 500px;
+      }
+
+      .faq-icon {
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+
+      .faq-icon.active {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <header>
+      <!-- Mobile Navigation - PERBAIKAN -->
+      <nav
+        class="md:hidden fixed top-4 left-2 right-2 z-50 bg-[#0C1A24] rounded-full"
+      >
+        <div class="flex items-center justify-between h-16 px-4">
+          <!-- Logo -->
+          <img
+            src="/src/assets/img/icon/asfera-logo.png"
+            alt="Asfera Logo"
+            class="h-12 w-auto"
+          />
+
+          <!-- Hamburger Button -->
+          <button
+            id="hamburger-btn"
+            class="text-[#E5D1A3] hover:text-amber-400 focus:outline-none"
+            aria-label="Menu"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div
+          id="mobile-menu"
+          class="hidden absolute top-14 left-6 right-6 bg-linear-to-b from-[#0C1A24] to-[#0C2233] shadow-lg"
+        >
+          <div class="flex flex-col p-4 gap-1">
+            <a
+              href="#home"
+              class="text-[#E5D1A3] hover:text-amber-400 font-bold font-inter py-3 px-4 hover:bg-[#0C2233] rounded-lg transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-[#E5D1A3] hover:text-amber-400 font-bold font-inter py-3 px-4 hover:bg-[#0C2233] rounded-lg transition-colors"
+              >About</a
+            >
+            <a
+              href="#events"
+              class="text-[#E5D1A3] hover:text-amber-400 font-bold font-inter py-3 px-4 hover:bg-[#0C2233] rounded-lg transition-colors"
+              >Events</a
+            >
+            <a
+              href="#competitions"
+              class="text-[#E5D1A3] hover:text-amber-400 font-bold font-inter py-3 px-4 hover:bg-[#0C2233] rounded-lg transition-colors"
+              >Competitions</a
+            >
+            <a
+              href="#faq"
+              class="text-[#E5D1A3] hover:text-amber-400 font-bold font-inter py-3 px-4 hover:bg-[#0C2233] rounded-lg transition-colors"
+              >FAQ</a
+            >
+            <a
+              href="#contact"
+              class="text-[#E5D1A3] hover:text-amber-400 font-bold font-inter py-3 px-4 hover:bg-[#0C2233] rounded-lg transition-colors"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Desktop & Tablet Navigation -->
+      <nav class="hidden md:fixed md:block top-16 left-16 right-16 z-40">
+        <div class="flex items-center h-20">
+          <!-- Menu Kiri -->
+          <div
+            class="flex items-center gap-6 px-4 bg-linear-to-r from-[#0C1A24] to-[#0C2233] h-full rounded-full basis-1/2 justify-around"
+          >
+            <a
+              href="#hero-section"
+              class="text-[#E5D1A3] hover:text-amber-400 transition-colors font-bold font-inter text-xl"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-[#E5D1A3] hover:text-amber-400 transition-colors font-bold font-inter text-xl"
+              >About</a
+            >
+            <a
+              href="#events"
+              class="text-[#E5D1A3] hover:text-amber-400 transition-colors font-bold font-inter text-xl"
+              >Events</a
+            >
+          </div>
+
+          <div class="flex justify-center items-center h-full shrink-0">
+            <a href="#">
+              <img
+                src="src/assets/img/icon/asfera-logo.png"
+                alt="Asfera Logo"
+                class="h-44 w-auto"
+            /></a>
+          </div>
+
+          <!-- Menu Kanan -->
+          <div
+            class="flex items-center gap-6 px-4 bg-linear-to-l from-[#0C2233] to-[#0C1A24] h-full rounded-full basis-1/2 justify-around"
+          >
+            <a
+              href="#competitions"
+              class="text-[#E5D1A3] hover:text-amber-400 transition-colors font-bold font-inter text-xl"
+              >Competitions</a
+            >
+            <a
+              href="#faq"
+              class="text-[#E5D1A3] hover:text-amber-400 transition-colors font-bold font-inter text-xl"
+              >FAQ</a
+            >
+            <a
+              href="#contact"
+              class="text-[#E5D1A3] hover:text-amber-400 transition-colors font-bold font-inter text-xl"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="hero-section"
+        class="bg-[url('/src/assets/img/bg/hero-bg.png')] bg-cover bg-center h-screen relative pt-16 md:pt-0"
+      >
+        <img
+          src="src/assets/img/icon/asfera-benner.png"
+          alt="Logo"
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[40vh] md:h-[60vh] w-auto"
+        />
+        <!-- Countdown container dengan flexbox -->
+        <div
+          class="absolute bottom-8 md:bottom-16 left-1/2 -translate-x-1/2 w-full px-4"
+        >
+          <div
+            class="flex flex-wrap justify-center gap-4 md:gap-10 max-w-4xl mx-auto"
+          >
+            <div
+              class="w-[calc(50%-0.5rem)] md:w-auto md:flex-1 md:max-w-63 bg-linear-to-l from-[#0C2233] to-[#0C1A24] rounded-2xl md:rounded-3xl border-2 border-[#E5D1A3] flex flex-col items-center justify-center py-6 md:py-8 px-4"
+            >
+              <span
+                id="days"
+                class="text-3xl md:text-6xl font-bold text-[#E5D1A3]"
+                >00</span
+              >
+              <span
+                class="text-xs md:text-sm text-[#E5D1A3] mt-1 md:mt-2 uppercase tracking-wider"
+                >Days</span
+              >
+            </div>
+            <div
+              class="w-[calc(50%-0.5rem)] md:w-auto md:flex-1 md:max-w-63 bg-linear-to-l from-[#0C2233] to-[#0C1A24] rounded-2xl md:rounded-3xl border-2 border-[#E5D1A3] flex flex-col items-center justify-center py-6 md:py-8 px-4"
+            >
+              <span
+                id="hours"
+                class="text-3xl md:text-6xl font-bold text-[#E5D1A3]"
+                >00</span
+              >
+              <span
+                class="text-xs md:text-sm text-[#E5D1A3] mt-1 md:mt-2 uppercase tracking-wider"
+                >Hours</span
+              >
+            </div>
+            <div
+              class="w-[calc(50%-0.5rem)] md:w-auto md:flex-1 md:max-w-63 bg-linear-to-l from-[#0C2233] to-[#0C1A24] rounded-2xl md:rounded-3xl border-2 border-[#E5D1A3] flex flex-col items-center justify-center py-6 md:py-8 px-4"
+            >
+              <span
+                id="minutes"
+                class="text-3xl md:text-6xl font-bold text-[#E5D1A3]"
+                >00</span
+              >
+              <span
+                class="text-xs md:text-sm text-[#E5D1A3] mt-1 md:mt-2 uppercase tracking-wider"
+                >Minute</span
+              >
+            </div>
+            <div
+              class="w-[calc(50%-0.5rem)] md:w-auto md:flex-1 md:max-w-63 bg-linear-to-l from-[#0C2233] to-[#0C1A24] rounded-2xl md:rounded-3xl border-2 border-[#E5D1A3] flex flex-col items-center justify-center py-6 md:py-8 px-4"
+            >
+              <span
+                id="seconds"
+                class="text-3xl md:text-6xl font-bold text-[#E5D1A3]"
+                >00</span
+              >
+              <span
+                class="text-xs md:text-sm text-[#E5D1A3] mt-1 md:mt-2 uppercase tracking-wider"
+                >Second</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section End -->
+
+      <!-- About Section -->
+      <section
+        id="about"
+        class="text-white py-12 md:py-20 w-full min-h-screen bg-linear-to-b from-[#0C1A24] to-[#0C2233] pt-24 md:pt-32 lg:pt-40 flex flex-col items-center gap-12 md:gap-24 lg:gap-32 px-4"
+      >
+        <a
+          href="#"
+          class="bg-[#E5D1A3] py-3 px-8 md:py-4 md:px-12 rounded-full text-lg md:text-xl font-cinzel text-center text-black hover:bg-[#d4c092] transition-colors"
+          >See our timeline</a
+        >
+
+        <!-- About container responsif -->
+        <div
+          class="w-full max-w-6xl bg-[#0C2233] rounded-3xl md:rounded-4xl flex flex-col md:flex-row justify-between items-center p-6 md:p-8 lg:p-10 gap-6 md:gap-8"
+        >
+          <!-- Kiri: Text -->
+          <div
+            class="flex flex-col justify-center w-full md:w-1/2 px-2 md:px-6 lg:px-10"
+          >
+            <h1
+              class="text-2xl md:text-3xl lg:text-4xl font-bold font-cinzel text-[#E5D1A3] mb-2"
+            >
+              About Asfera
+            </h1>
+            <p
+              class="font-inter mt-4 text-sm md:text-base lg:text-lg text-justify text-white leading-relaxed"
+            >
+              As-Syifa Festival Raya (ASFERA) merupakan agenda tahunan berskala
+              nasional yang diselenggarakan sebagai wujud sinergi dan kolaborasi
+              hasil unifikasi empat kampus SMAIT As-Syifa Boarding School, yaitu
+              As-Syifa Boarding School Jalancagak, As-Syifa Boarding School
+              Wanareja, As-Syifa Boarding School Sagalaherang, dan As-Syifa
+              Boarding School Jalancagak 2. ASFERA 2026 dirancang sebagai wadah
+              kompetisi dan apresiasi potensi pelajar tingkat SMP dan
+              SMA/sederajat di seluruh Indonesia, melalui berbagai cabang
+              perlombaan di bidang olahraga, seni, serta keterampilan. Kegiatan
+              ini bertujuan untuk menumbuhkan semangat sportivitas, mengasah
+              kreativitas, memperluas jejaring antarpelajar, serta mempererat
+              Solidaritas dan kolaborasi antar lembaga pendidikan.
+            </p>
+          </div>
+
+          <!-- Kanan: Gambar -->
+          <div
+            class="w-full md:w-1/2 flex items-center justify-center px-4 md:px-6"
+          >
+            <div class="w-full max-w-sm md:max-w-md lg:max-w-lg">
+              <img
+                src="src/assets/img/icon/logo-asfera-2.png"
+                alt="About Asfera Image"
+                class="w-full h-auto rounded-3xl md:rounded-4xl object-contain"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Container responsif - Ukuran dibatasi seperti Competitions -->
+        <div class="w-full max-w-5xl px-4">
+          <div class="relative w-full h-auto aspect-video">
+            <!-- Frame Image (di belakang) -->
+            <img
+              src="src/assets/img/frame-youtube.png"
+              alt="Frame"
+              class="absolute inset-0 w-full h-full object-cover z-10 pointer-events-none"
+            />
+            <!-- YouTube Video (di tengah) -->
+            <div
+              class="absolute inset-0 flex items-center justify-center p-6 sm:p-10 md:p-16 lg:p-20"
+            >
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/KrcHmVzmFN8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                class="rounded-sm shadow-lg"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section End -->
+
+      <!-- Features Section -->
+      <section
+        id="features"
+        class="bg-[url('/src/assets/img/bg/features-bg.png')] bg-cover bg-center min-h-screen md:min-h-[208vh] py-12 md:py-20 lg:py-32 px-4"
+      >
+        <div class="container mx-auto max-w-7xl h-full">
+          <!-- Grid Container -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 xl:gap-20 items-start"
+          >
+            <!-- Left Column - 2 Cards with offset -->
+            <div
+              class="flex flex-col gap-8 md:gap-12 lg:gap-16 xl:gap-20 pt-0 lg:pt-32 xl:pt-40"
+            >
+              <!-- Card 1 Left -->
+              <div class="w-full flex justify-center lg:justify-start">
+                <img
+                  src="src/assets/img/card/features-card-1.png"
+                  alt="Feature 1"
+                  class="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-md xl:max-w-lg h-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-2xl"
+                />
+              </div>
+
+              <!-- Card 2 Left -->
+              <div
+                class="w-full flex justify-center lg:justify-end lg:pr-8 xl:pr-12"
+              >
+                <img
+                  src="src/assets/img/card/features-card-2.png"
+                  alt="Feature 2"
+                  class="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-md xl:max-w-lg h-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-2xl"
+                />
+              </div>
+            </div>
+
+            <!-- Right Column - 2 Cards -->
+            <div class="flex flex-col gap-8 md:gap-12 lg:gap-16 xl:gap-20">
+              <!-- Card 3 Right -->
+              <div
+                class="w-full flex justify-center lg:justify-start lg:pl-8 xl:pl-12"
+              >
+                <img
+                  src="src/assets/img/card/features-card-3.png"
+                  alt="Feature 3"
+                  class="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-md xl:max-w-lg h-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-2xl"
+                />
+              </div>
+
+              <!-- Card 4 Right -->
+              <div class="w-full flex justify-center lg:justify-end">
+                <img
+                  src="src/assets/img/card/features-card-4.png"
+                  alt="Feature 4"
+                  class="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-md xl:max-w-lg h-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Features Section End -->
+
+      <!-- Competitions Section -->
+      <section
+        id="competitions"
+        class="w-full h-330 bg-linear-to-b from-[#0C1A24] to-[#0C2233] flex flex-col items-center justify-center"
+      >
+        <div>
+          <img src="src/assets/img/frame-youtube.png" alt="" />
+        </div>
+        <div class="flex">
+          <a href="">
+            <img
+              src="src/assets/img/card/categories-card-putra.png"
+              alt=""
+              class=""
+          /></a>
+          <a href="">
+            <img
+              src="src/assets/img/card/categories-card-putri.png"
+              alt=""
+              class=""
+          /></a>
+        </div>
+      </section>
+      <!-- Competitions Section End -->
+
+      <!-- FAQ Section -->
+      <section
+        id="faq"
+        class="bg-[url('/src/assets/img/bg/faq-bg.png')] bg-no-repeat bg-cover bg-center min-h-screen flex flex-col items-center justify-center py-12 md:py-16"
+      >
+        <div class="w-full max-w-4xl px-4 sm:px-6 md:px-8">
+          <p
+            class="font-cinzel text-[#E5D1A3] text-4xl md:text-4xl lg:text-5xl font-bold text-left"
+          >
+            FAQ
+          </p>
+        </div>
+        <div class="w-full max-w-4xl py-8 px-4 sm:px-6 md:px-8">
+          <div
+            class="bg-linear-to-br from-[#0C1A24] to-[#0C2233] rounded-xl md:rounded-2xl shadow-xl overflow-hidden"
+          >
+            <!-- FAQ Item 1 -->
+            <div class="faq-item border-b border-slate-700">
+              <div
+                class="faq-question px-4 sm:px-6 md:px-7 py-4 md:py-6 cursor-pointer flex justify-between items-center hover:bg-white/5 transition-colors"
+              >
+                <div
+                  class="question-text text-base sm:text-lg md:text-xl font-semibold text-white flex-1 pr-3"
+                >
+                  As-Syifa Festival Raya 2026 itu apa sih?
+                </div>
+                <div
+                  class="faq-icon text-blue-400 text-xl md:text-2xl shrink-0 transition-transform duration-300"
+                >
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-answer px-4 sm:px-6 md:px-7">
+                <div class="pt-3 pb-4 md:pb-6">
+                  <p
+                    class="text-slate-300 text-sm sm:text-base leading-relaxed mb-3"
+                  >
+                    Festival tahunan terbesar se-Yayasan As-Syifa dengan tema
+                    "The Rise Of Unity, Ignite Your Destiny" - ajang unjuk
+                    bakat, kompetisi, dan pengembangan diri buat pelajar
+                    se-Indonesia yang pengen ngasah potensi mereka!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item border-b border-slate-700">
+              <div
+                class="faq-question px-4 sm:px-6 md:px-7 py-4 md:py-6 cursor-pointer flex justify-between items-center hover:bg-white/5 transition-colors"
+              >
+                <div
+                  class="question-text text-base sm:text-lg md:text-xl font-semibold text-white flex-1 pr-3"
+                >
+                  Siapa aja yang ngadain acara ini?
+                </div>
+                <div
+                  class="faq-icon text-blue-400 text-xl md:text-2xl shrink-0 transition-transform duration-300"
+                >
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-answer px-4 sm:px-6 md:px-7">
+                <div class="pt-3 pb-4 md:pb-6">
+                  <p
+                    class="text-slate-300 text-sm sm:text-base leading-relaxed mb-3"
+                  >
+                    Kolaborasi 4 kampus di bawah naungan Yayasan As-Syifa:
+                  </p>
+                  <ol class="list-decimal pl-5 space-y-2">
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      SMAIT As-Syifa Boarding School Jalancagak
+                    </li>
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      SMAIT As-Syifa Boarding School Wanareja
+                    </li>
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      MA As-Syifa Sagalaherang
+                    </li>
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      SMKIT As-Syifa Jalancagak 2
+                    </li>
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      Mulai gunakan fitur-fitur yang tersedia
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item border-b border-slate-700">
+              <div
+                class="faq-question px-4 sm:px-6 md:px-7 py-4 md:py-6 cursor-pointer flex justify-between items-center hover:bg-white/5 transition-colors"
+              >
+                <div
+                  class="question-text text-base sm:text-lg md:text-xl font-semibold text-white flex-1 pr-3"
+                >
+                  Lokasinya dimana?
+                </div>
+                <div
+                  class="faq-icon text-blue-400 text-xl md:text-2xl shrink-0 transition-transform duration-300"
+                >
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-answer px-4 sm:px-6 md:px-7">
+                <div class="pt-3 pb-4 md:pb-6">
+                  <p
+                    class="text-slate-300 text-sm sm:text-base leading-relaxed mb-3"
+                  >
+                    Berputar di 4 kampus As-Syifa (Jalancagak, Jalancagak 2,
+                    Wanareja, dan Sagalaherang)
+                  </p>
+                  <p
+                    class="text-slate-300 text-sm sm:text-base leading-relaxed mb-2"
+                  >
+                    Untuk mengajukan permintaan pengembalian dana:
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item border-b border-slate-700">
+              <div
+                class="faq-question px-4 sm:px-6 md:px-7 py-4 md:py-6 cursor-pointer flex justify-between items-center hover:bg-white/5 transition-colors"
+              >
+                <div
+                  class="question-text text-base sm:text-lg md:text-xl font-semibold text-white flex-1 pr-3"
+                >
+                  Kenapa kamu harus ikutan?
+                </div>
+                <div
+                  class="faq-icon text-blue-400 text-xl md:text-2xl shrink-0 transition-transform duration-300"
+                >
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-answer px-4 sm:px-6 md:px-7">
+                <div class="pt-3 pb-4 md:pb-6">
+                  <ul class="list-disc pl-5 space-y-2">
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      Wadah sempurna buat ngasah dan pamer kemampuan kamu
+                    </li>
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      Kesempatan networking dengan pelajar se-Indonesia
+                    </li>
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      Pengalaman berharga yang nggak bakal terlupakan
+                    </li>
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      Bisa dapetin sertifikat dan hadiah menarik!
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item border-b border-slate-700">
+              <div
+                class="faq-question px-4 sm:px-6 md:px-7 py-4 md:py-6 cursor-pointer flex justify-between items-center hover:bg-white/5 transition-colors"
+              >
+                <div
+                  class="question-text text-base sm:text-lg md:text-xl font-semibold text-white flex-1 pr-3"
+                >
+                  Kapan acaranya?
+                </div>
+                <div
+                  class="faq-icon text-blue-400 text-xl md:text-2xl shrink-0 transition-transform duration-300"
+                >
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-answer px-4 sm:px-6 md:px-7">
+                <div class="pt-3 pb-4 md:pb-6">
+                  <p
+                    class="text-slate-300 text-sm sm:text-base leading-relaxed mb-3"
+                  >
+                    11-20 April 2026 (10 hari penuh keseruan!)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+              <div
+                class="faq-question px-4 sm:px-6 md:px-7 py-4 md:py-6 cursor-pointer flex justify-between items-center hover:bg-white/5 transition-colors"
+              >
+                <div
+                  class="question-text text-base sm:text-lg md:text-xl font-semibold text-white flex-1 pr-3"
+                >
+                  Ada kegiatan apa aja?
+                </div>
+                <div
+                  class="faq-icon text-blue-400 text-xl md:text-2xl shrink-0 transition-transform duration-300"
+                >
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+              </div>
+              <div class="faq-answer px-4 sm:px-6 md:px-7">
+                <div class="pt-3 pb-4 md:pb-6">
+                  <ul class="list-disc pl-5 space-y-2">
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      Kompetisi multi-kategori (akademik, seni, olahraga)
+                    </li>
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      Seminar inspiratif dengan pembicara keren
+                    </li>
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      Workshop edukatif & skill development
+                    </li>
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      Pentas seni & cultural performance
+                    </li>
+                    <li class="text-slate-300 text-sm sm:text-base">
+                      Dan masih banyak surprise lainnya!
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ Section End -->
+
+      <!-- Sponsors Section -->
+      <section
+        id="sponsors"
+        class="w-full min-h-screen bg-linear-to-b from-[#0C1A24] to-[#0C2233] flex flex-col items-center justify-center py-12 md:py-20 lg:py-32 px-4"
+      >
+        <!-- Title Section -->
+        <div class="text-center mb-8 md:mb-12 lg:mb-16">
+          <h2
+            class="text-4xl md:text-4xl lg:text-5xl font-cinzel font-bold text-[#E5D1A3] uppercase"
+          >
+            Sponsor
+          </h2>
+        </div>
+
+        <!-- Sponsors Grid Container -->
+        <div class="w-full max-w-7xl">
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5 lg:gap-6"
+          >
+            <!-- Sponsor Card 1 - British Propolis -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/british-propolis.png"
+                alt="British Propolis"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 2 - Beso -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/beso.png"
+                alt="Beso"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 3 - Tumbay -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/tumbay.png"
+                alt="Tumbay"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 4 - BSI -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/bsi.png"
+                alt="BSI"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 5 - Migas Hulu Jabar -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/migas-hulu.png"
+                alt="Migas Hulu Jabar"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 6 - HIK -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/hik.png"
+                alt="HIK"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 7 - Savcana -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/savcana.png"
+                alt="Savcana"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 8 - Buymana Chips -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/buymana-chips.png"
+                alt="Buymana Chips"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 9 - Emina Lovely -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/emina-lovely.png"
+                alt="Emina Lovely"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 10 - Posh -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/posh.png"
+                alt="Posh"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 11 - Zinc -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/zinc.png"
+                alt="Zinc"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 12 - Airman -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/airman.png"
+                alt="Airman"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 13 - IK -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/ik.png"
+                alt="IK"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 14 - Dahana -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/dahana.png"
+                alt="Dahana"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 15 - PT Binor Budi Sentosa -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/binor-budi.png"
+                alt="PT Binor Budi Sentosa"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 16 - Edung -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/edung.png"
+                alt="Edung"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 17 - Krida Karya -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/krida-karya.png"
+                alt="Krida Karya"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 18 - Pupuk Indonesia -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/pupuk-indonesia.png"
+                alt="Pupuk Indonesia"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 19 - Lab Klinik -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/lab-klinik.png"
+                alt="Lab Klinik"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 20 - Rumah Sakit -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/rumah-sakit.png"
+                alt="Rumah Sakit"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 21 - Ajaib -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/ajaib.png"
+                alt="Ajaib"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 22 - Bukit Asam -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/bukit-asam.png"
+                alt="Bukit Asam"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 23 - Masya -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/masya.png"
+                alt="Masya"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 24 - Wardah -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/wardah.png"
+                alt="Wardah"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 25 - Pertamina -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/pertamina.png"
+                alt="Pertamina"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 26 - Hijacket -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/hijacket.png"
+                alt="Hijacket"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 27 - Qupro -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/qupro.png"
+                alt="Qupro"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 28 - Kahf -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/kahf.png"
+                alt="Kahf"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 29 - Paragon Corp -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/paragon.png"
+                alt="Paragon Corp"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 30 - Quamus -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/quamus.png"
+                alt="Quamus"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 31 - SMF -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/smf.png"
+                alt="SMF"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 32 - Saka -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/saka.png"
+                alt="Saka"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 33 - Wika -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/wika.png"
+                alt="Wika"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+
+            <!-- Sponsor Card 34 - King Pompa -->
+            <div
+              class="bg-[#E5D1A3] rounded-2xl md:rounded-3xl p-4 md:p-5 flex items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg aspect-3/2"
+            >
+              <img
+                src="src/assets/img/sponsors/king-pompa.png"
+                alt="King Pompa"
+                class="w-full h-full object-contain p-2"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sponsors Section End -->
+
+      <!-- Homestay Section -->
+      <section
+        id="homestay"
+        class="bg-[url('/src/assets/img/bg/homestay-bg.png')] bg-cover bg-center min-h-screen flex flex-col items-center justify-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 py-12 md:py-20 lg:py-32 px-4"
+      >
+        <!-- Title and Icon Container -->
+        <div
+          class="flex flex-col items-center justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-12"
+        >
+          <!-- Title -->
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl xl:text-7xl text-[#E5D1A3] font-bold font-cinzel text-center"
+          >
+            Homestay
+          </h2>
+
+          <!-- Icon -->
+          <div
+            class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
+          >
+            <img
+              src="src/assets/img/icon/homestay-icon.png"
+              alt="Homestay Icon"
+              class="w-full h-auto object-contain drop-shadow-2xl"
+            />
+          </div>
+        </div>
+
+        <!-- Buttons Container -->
+        <div
+          class="flex flex-col items-center justify-center sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 w-full max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl px-4"
+        >
+          <!-- Rulebook Button -->
+          <a
+            href="#"
+            class="font-cinzel font-bold text-black bg-[#E5D1A3] py-2.5 px-7 sm:py-3 sm:px-8 md:py-3.5 md:px-10 lg:py-4 lg:px-12 xl:py-5 xl:px-14 rounded-full text-center w-full uppercase tracking-wider text-sm sm:text-base md:text-lg lg:text-xl hover:bg-[#d4c092] hover:scale-105 transition-all duration-300 shadow-lg"
+          >
+            Rulebook
+          </a>
+
+          <!-- Registration Button -->
+          <a
+            href="#"
+            class="font-cinzel font-bold text-black bg-[#E5D1A3] py-2.5 px-7 sm:py-3 sm:px-8 md:py-3.5 md:px-10 lg:py-4 lg:px-12 xl:py-5 xl:px-14 rounded-full text-center w-full uppercase tracking-wider text-sm sm:text-base md:text-lg lg:text-xl hover:bg-[#d4c092] hover:scale-105 transition-all duration-300 shadow-lg"
+          >
+            Registration
+          </a>
+        </div>
+      </section>
+      <!-- Homestay Section End -->
+
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="w-full min-h-100 bg-linear-to-b from-[#0C1A24] to-[#0C2233] px-8 py-16"
+      >
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+          <!-- Left Side - Contact Info -->
+          <div class="space-y-12">
+            <!-- Contact Info -->
+            <div>
+              <h2
+                class="text-[#D4AF6A] text-3xl md:text-4xl font-serif mb-8 tracking-wider"
+              >
+                CONTACT
+              </h2>
+              <div class="space-y-3 text-white">
+                <p class="text-sm md:text-base">
+                  <span class="font-medium">CAGAK 2 PUTRA :</span> 089793568839
+                </p>
+                <p class="text-sm md:text-base">
+                  <span class="font-medium">CAGAK PUTRA :</span> 082139225703
+                </p>
+                <p class="text-sm md:text-base">
+                  <span class="font-medium">CAGAK PUTRA :</span> 085248637744
+                </p>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div>
+              <h3
+                class="text-[#D4AF6A] text-2xl md:text-3xl font-serif mb-6 tracking-wider"
+              >
+                FOLLOW US
+              </h3>
+              <div class="flex gap-4">
+                <a
+                  href="#"
+                  class="w-12 h-12 md:w-14 md:h-14 bg-[#C8C8C8] rounded-full hover:bg-[#D4AF6A] transition-colors duration-300 flex items-center justify-center"
+                  aria-label="Facebook"
+                >
+                  <!-- Add icon here -->
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 md:w-14 md:h-14 bg-[#C8C8C8] rounded-full hover:bg-[#D4AF6A] transition-colors duration-300 flex items-center justify-center"
+                  aria-label="Instagram"
+                >
+                  <!-- Add icon here -->
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 md:w-14 md:h-14 bg-[#C8C8C8] rounded-full hover:bg-[#D4AF6A] transition-colors duration-300 flex items-center justify-center"
+                  aria-label="Twitter"
+                >
+                  <!-- Add icon here -->
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side - Location -->
+          <div>
+            <h2
+              class="text-[#D4AF6A] text-3xl md:text-4xl font-serif mb-8 tracking-wider"
+            >
+              OUR LOCATION
+            </h2>
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Kampus 1 -->
+              <button
+                class="bg-[#D4AF6A] hover:bg-[#C49E59] transition-colors duration-300 rounded-3xl p-8 md:p-10 flex items-center justify-center"
+              >
+                <span
+                  class="text-[#0C1A24] text-xl md:text-2xl font-serif tracking-wide"
+                >
+                  KAMPUS 1
+                </span>
+              </button>
+
+              <!-- Kampus 2 -->
+              <button
+                class="bg-[#D4AF6A] hover:bg-[#C49E59] transition-colors duration-300 rounded-3xl p-8 md:p-10 flex items-center justify-center"
+              >
+                <span
+                  class="text-[#0C1A24] text-xl md:text-2xl font-serif tracking-wide"
+                >
+                  KAMPUS 2
+                </span>
+              </button>
+
+              <!-- Kampus 3 -->
+              <button
+                class="bg-[#D4AF6A] hover:bg-[#C49E59] transition-colors duration-300 rounded-3xl p-8 md:p-10 flex items-center justify-center"
+              >
+                <span
+                  class="text-[#0C1A24] text-xl md:text-2xl font-serif tracking-wide"
+                >
+                  KAMPUS 3
+                </span>
+              </button>
+
+              <!-- Kampus 4 -->
+              <button
+                class="bg-[#D4AF6A] hover:bg-[#C49E59] transition-colors duration-300 rounded-3xl p-8 md:p-10 flex items-center justify-center"
+              >
+                <span
+                  class="text-[#0C1A24] text-xl md:text-2xl font-serif tracking-wide"
+                >
+                  KAMPUS 4
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section End -->
+    </main>
+
+    <!-- Footer Section Start -->
+    <footer
+      class="relative bg-[#0A1929] text-white overflow-hidden min-h-37.5 sm:min-h-45 lg:min-h-50"
+    >
+      <!-- Mountain Wave Top -->
+      <div class="absolute top-0 left-0 w-full overflow-hidden leading-none">
+        <svg
+          class="relative block w-full h-16 sm:h-20 md:h-24"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,0 L0,40 Q150,100 300,40 T600,40 Q750,100 900,40 T1200,40 L1200,0 Z"
+            class="fill-[#0D2847] opacity-80"
+          ></path>
+          <path
+            d="M0,20 L0,60 Q200,110 400,50 T800,50 Q1000,110 1200,60 L1200,20 Z"
+            class="fill-[#0D2847] opacity-60"
+          ></path>
+        </svg>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-6 sm:pb-8 md:pb-10 lg:pb-12 text-center px-4"
+      >
+        <h2 class="font-cinzel text-lg sm:text-xl md:text-2xl tracking-widest">
+          COPYRIGHT
+        </h2>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <script>
+      // Target date: 11 April 2026
+      const targetDate = new Date(2026, 3, 11).getTime();
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        // Jika tanggal sudah lewat, set 30 hari dari sekarang
+        if (distance < 0) {
+          const newTargetDate = new Date();
+          newTargetDate.setDate(newTargetDate.getDate() + 30);
+          targetDate = newTargetDate.getTime();
+          return updateCountdown();
+        }
+
+        // Hitung waktu
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Update tampilan
+        document.getElementById("days").textContent = String(days).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("hours").textContent = String(hours).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("minutes").textContent = String(
+          minutes,
+        ).padStart(2, "0");
+        document.getElementById("seconds").textContent = String(
+          seconds,
+        ).padStart(2, "0");
+      }
+
+      // Mobile Menu Toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        // Countdown
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Mobile menu
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (hamburgerBtn && mobileMenu) {
+          hamburgerBtn.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+          });
+
+          // Close menu when clicking on a link
+          const menuLinks = mobileMenu.querySelectorAll("a");
+          menuLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+              mobileMenu.classList.add("hidden");
+            });
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener("click", function (event) {
+            if (
+              !mobileMenu.contains(event.target) &&
+              !hamburgerBtn.contains(event.target)
+            ) {
+              mobileMenu.classList.add("hidden");
+            }
+          });
+        }
+      });
+
+      // FAQ Accordion Functionality can be added here
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ambil semua elemen FAQ question
+        const faqQuestions = document.querySelectorAll(".faq-question");
+        const searchInput = document.getElementById("searchInput");
+
+        // Fungsi untuk toggle FAQ item
+        function toggleFAQ(item) {
+          const answer = item.nextElementSibling;
+          const icon = item.querySelector(".faq-icon");
+
+          // Tutup semua FAQ yang terbuka
+          faqQuestions.forEach((otherItem) => {
+            if (otherItem !== item && otherItem.classList.contains("active")) {
+              otherItem.classList.remove("active");
+              otherItem.classList.remove("bg-blue-50");
+              otherItem.nextElementSibling.classList.remove("active");
+              otherItem.querySelector(".faq-icon").classList.remove("active");
+              otherItem
+                .querySelector(".faq-icon")
+                .classList.remove("text-blue-600");
+            }
+          });
+
+          // Toggle FAQ yang diklik
+          const isActive = item.classList.contains("active");
+
+          if (isActive) {
+            item.classList.remove("active", "bg-blue-50");
+            answer.classList.remove("active");
+            icon.classList.remove("active", "text-blue-600");
+          } else {
+            item.classList.add("active", "bg-blue-50");
+            answer.classList.add("active");
+            icon.classList.add("active", "text-blue-600");
+          }
+        }
+
+        // Tambahkan event listener untuk setiap FAQ question
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", () => {
+            toggleFAQ(question);
+          });
+        });
+
+        // Fungsi untuk mencari FAQ
+        function searchFAQ() {
+          const searchTerm = searchInput.value.toLowerCase();
+          const faqItems = document.querySelectorAll(".faq-item");
+
+          faqItems.forEach((item) => {
+            const question = item
+              .querySelector(".question-text")
+              .textContent.toLowerCase();
+            const answer = item
+              .querySelector(".faq-answer")
+              .textContent.toLowerCase();
+
+            if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        }
+
+        // Tambahkan event listener untuk pencarian
+        searchInput.addEventListener("input", searchFAQ);
+
+        // Buka FAQ pertama secara default
+        if (faqQuestions.length > 0) {
+          toggleFAQ(faqQuestions[0]);
+        }
+      });
+    </script>
+  </body>
+</html>

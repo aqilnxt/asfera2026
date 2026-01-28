@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("assets/fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/Cinzel_Decorative/CinzelDecorative-Bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("assets/fonts/Cinzel_Decorative/CinzelDecorative-Black.ttf")
+    format("truetype");
+}
+
+/* Inter Regular */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("assets/fonts/inter/Inter-VariableFont_opsz\,wght.ttf")
+    format("truetype");
+}
+
+/* Inter Italic */
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("assets/fonts/inter/Inter-Italic-VariableFont_opsz\,wght.ttf")
+    format("truetype");
+}
+
+/* Utility classes */
+@layer utilities {
+  .font-cinzel {
+    font-family: "Cinzel Decorative", serif;
+  }
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@theme {
+  --font-cinzel: "Cinzel Decorative", cursive;
+  --font-inter: "Inter", sans-serif;
+}
